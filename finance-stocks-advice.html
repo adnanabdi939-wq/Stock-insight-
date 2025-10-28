@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Pro - Live Stocks & Expert Advice</title>
+    <meta name="description" content="Track live stock prices and get professional investment advice from financial experts">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#3b82f6",
+                        accent: "#10b981",
+                        dark: "#1f2937",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-sm"></i>
+                    </div>
+                    <span class="text-xl font-bold text-dark">Finance Pro</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-dark hover:text-primary font-medium transition-colors">Live Stocks</a>
+                    <a href="#" class="text-dark hover:text-primary font-medium transition-colors">Expert Advice</a>
+                    <a href="#" class="text-dark hover:text-primary font-medium transition-colors">Portfolio</a>
+                    <a href="#" class="text-dark hover:text-primary font-medium transition-colors">News</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors font-medium">
+                        Sign In
+                    </button>
+                    <button class="md:hidden text-dark">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Track Live Stocks & Get Expert Advice</h1>
+                    <p class="text-xl mb-8 opacity-90">Real-time market data combined with professional insights to help you make smarter investment decisions</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Start Free Trial
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Stocks Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4">Live Stock Market</h2>
+                    <p class="text-gray-600 text-lg">Real-time prices and market movements</p>
+                </div>
+
+                <!-- Stock Ticker -->
+                <div class="bg-dark text-white rounded-lg p-4 mb-8 overflow-hidden">
+                    <div class="flex space-x-8 animate-marquee whitespace-nowrap">
+                        <div class="flex items-center space-x-4">
+                            <span class="font-semibold">AAPL</span>
+                            <span class="text-accent">+1.2%</span>
+                            <span>$175.43</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="font-semibold">MSFT</span>
+                            <span class="text-accent">+0.8%</span>
+                            <span>$337.21</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="font-semibold">GOOGL</span>
+                            <span class="text-red-400">-0.5%</span>
+                            <span>$138.75</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="font-semibold">TSLA</span>
+                            <span class="text-accent">+2.1%</span>
+                            <span>$245.67</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="font-semibold">AMZN</span>
+                            <span class="text-red-400">-0.3%</span>
+                            <span>$145.89</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stock Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-light border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-lg text-dark">Apple Inc.</h3>
+                                <p class="text-gray-600">AAPL</p>
+                            </div>
+                            <span class="text-accent font-semibold">+1.2%</span>
+                        </div>
+                        <div class="text-2xl font-bold text-dark mb-4">$175.43</div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>Open: $173.50</span>
+                            <span>Volume: 45.2M</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-light border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-lg text-dark">Microsoft</h3>
+                                <p class="text-gray-600">MSFT</p>
+                            </div>
+                            <span class="text-accent font-semibold">+0.8%</span>
+                        </div>
+                        <div class="text-2xl font-bold text-dark mb-4">$337.21</div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>Open: $334.80</span>
+                            <span>Volume: 28.7M</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-light border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-lg text-dark">Tesla Inc.</h3>
+                                <p class="text-gray-600">TSLA</p>
+                            </div>
+                            <span class="text-accent font-semibold">+2.1%</span>
+                        </div>
+                        <div class="text-2xl font-bold text-dark mb-4">$245.67</div>
+                        <div class="flex justify-between text-sm text-gray-600">
+                            <span>Open: $240.50</span>
+                            <span>Volume: 32.1M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expert Advice Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark mb-4">Professional Advice</h2>
+                    <p class="text-gray-600 text-lg">Get insights from certified financial experts</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Expert 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <img src="https://picsum.photos/80?random=1" alt="Sarah Johnson - Financial Analyst" class="w-16 h-16 rounded-full object-cover">
+                                <div>
+                                    <h3 class="font-bold text-dark">Sarah Johnson</h3>
+                                    <p class="text-gray-600 text-sm">CFA, 15 years experience</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">"Tech stocks show strong momentum. Consider diversifying with emerging AI companies for long-term growth."</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">2 hours ago</span>
+                                <button class="text-primary hover:text-secondary text-sm font-medium">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expert 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <img src="https://picsum.photos/80?random=2" alt="Michael Chen - Investment Advisor" class="w-16 h-16 rounded-full object-cover">
+                                <div>
+                                    <h3 class="font-bold text-dark">Michael Chen</h3>
+                                    <p class="text-gray-600 text-sm">MBA, 12 years experience</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">"Market volatility presents buying opportunities. Focus on fundamentally strong companies with solid cash flow."</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">4 hours ago</span>
+                                <button class="text-primary hover:text-secondary text-sm font-medium">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Expert 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-4 mb-4">
+                                <img src="https://picsum.photos/80?random=3" alt="Emily Rodriguez - Portfolio Manager" class="w-16 h-16 rounded-full object-cover">
+                                <div>
+                                    <h3 class="font-bold text-dark">Emily Rodriguez</h3>
+                                    <p class="text-gray-600 text-sm">CPA, 18 years experience</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-4">"Energy sector showing signs of recovery. Renewable energy stocks particularly attractive for sustainable growth."</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-gray-500">6 hours ago</span>
+                                <button class="text-primary hover:text-secondary text-sm font-medium">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Chat with Experts -->
+                <div class="mt-12 bg-white rounded-lg shadow-lg p-8">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-dark mb-2">Live Expert Chat</h3>
+                        <p class="text-gray-600">Connect directly with financial professionals</p>
+                    </div>
+                    
+                    <div class="max-w-2xl mx-auto">
+                        <div class="bg-gray-100 rounded-lg p-4 mb-4 h-48 overflow-y-auto">
+                            <div class="space-y-4">
+                                <div class="flex justify-start">
+                                    <div class="bg-primary text-white rounded-lg p-3 max-w-xs">
+                                <p class="text-sm">Hello! I'm looking for advice on tech stock investments.</p>
+                                <span class="text-xs text-gray-300 block mt-1">2:30 PM</span>
+                            </div>
+                            <div class="flex justify-end">
+                                <div class="bg-accent text-white rounded-lg p-3 max-w-xs">
+                                    <p class="text-sm">Great question! Tech stocks are currently showing strong growth potential, particularly in AI and cloud computing sectors.</p>
+                                <span class="text-xs text-gray-600 block mt-1">2:31 PM</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-2">
+                            <input 
+                                type="text" 
+                                placeholder="Type your question..." 
+                                class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+                            >
+                            <button class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Real-time Data</h3>
+                        <p class="text-gray-600">Live stock prices updated every second with advanced market analytics</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-tie text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Expert Insights</h3>
+                        <p class="text-gray-600">Professional analysis and recommendations from certified financial advisors</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-comments text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Live Chat</h3>
+                        <p class="text-gray-600">Direct communication with financial experts for personalized advice</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold">Finance Pro</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted partner for stock market insights and professional financial advice.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Features</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Live Stocks</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Expert Advice</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Portfolio Tracking</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Market News</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Subscribe</h4>
+                    <p class="text-gray-400 mb-4">Get the latest market insights delivered to your inbox</p>
+                    <div class="flex space-x-2">
+                        <input 
+                            type="email" 
+                            placeholder="Your email" 
+                            class="bg-gray-700 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                        >
+                        <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Finance Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Define stock data
+        const stocks = [
+            { "symbol": "AAPL", "name": "Apple Inc.", "price": 175.43, "change": 1.2, "open": 173.50, "volume": "45.2M" },
+            { "symbol": "MSFT", "name": "Microsoft", "price": 337.21, "change": 0.8, "open": 334.80, "volume": "28.7M" },
+            { "symbol": "TSLA", "name": "Tesla Inc.", "price": 245.67, "change": 2.1, "open": 240.50, "volume": "32.1M" },
+            { "symbol": "GOOGL", "name": "Alphabet Inc.", "price": 138.75, "change": -0.5, "open": 139.20, "volume": "22.8M" },
+            { "symbol": "AMZN", "name": "Amazon.com", "price": 145.89, "change": -0.3, "open": 146.30, "volume": "38.5M" }
+        ];
+
+        // Define experts data
+        const experts = [
+            { 
+                "id": 1, 
+                "name": "Sarah Johnson", 
+                "title": "CFA, 15 years experience", 
+                "advice": "Tech stocks show strong momentum. Consider diversifying with emerging AI companies for long-term growth.",
+                "time": "2 hours ago"
+            },
+            { 
+                "id": 2, 
+                "name": "Michael Chen", 
+                "title": "MBA, 12 years experience", 
+                "advice": "Market volatility presents buying opportunities. Focus on fundamentally strong companies with solid cash flow.",
+                "time": "4 hours ago"
+            },
+            { 
+                "id": 3, 
+                "name": "Emily Rodriguez", 
+                "title": "CPA, 18 years experience", 
+                "advice": "Energy sector showing signs of recovery. Renewable energy stocks particularly attractive for sustainable growth.",
+                "time": "6 hours ago"
+            }
+        ];
+
+        // Prevent default anchor behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href="#"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                });
+            });
+
+            // Simulate live stock updates
+            function updateStockPrices() {
+                const stockCards = document.querySelectorAll('.bg-light.border');
+                stockCards.forEach((card, index) => {
+                    if (index < stocks.length) {
+                        const stock = stocks[index];
+                        const randomChange = (Math.random() - 0.5) * 2;
+                        const newPrice = stock.price + randomChange;
+                        const changePercent = ((randomChange / stock.price) * 100).toFixed(2);
+                        
+                        const priceElement = card.querySelector('.text-2xl');
+                        const changeElement = card.querySelector('.font-semibold');
+                        
+                        priceElement.textContent = `$${newPrice.toFixed(2)}`;
+                        
+                        if (parseFloat(changePercent) > 0) {
+                            changeElement.textContent = `+${Math.abs(changePercent)}%`;
+                            changeElement.className = 'text-accent font-semibold';
+                        } else {
+                            changeElement.textContent = `-${Math.abs(changePercent)}%`;
+                            changeElement.className = 'text-red-400 font-semibold';
+                        }
+                    }
+                });
+            }
+
+            // Update stock prices every 5 seconds
+            setInterval(updateStockPrices, 5000);
+        });
+    </script>
+
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+</body>
+</html>
